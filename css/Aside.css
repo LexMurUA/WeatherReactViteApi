@@ -23,4 +23,10 @@
 .container-aside li:hover {
   scale: 1.1;
   color: aquamarine;
+}
+
+@media (max-width: 1024px) {
+  .container-aside {
+    display: none;
+  }
 }/*# sourceMappingURL=Aside.css.map */

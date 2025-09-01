@@ -1,54 +1,81 @@
-.search-weather{
+@use "../../common" as *;
+
+.search-weather {
   margin: 0 auto;
-  max-width: 50vw;
+  min-width: 40vw;
   background-color: rgba(251, 255, 0, 0.8);
   border-radius: 25px;
   padding: 15px;
   box-shadow: 0px 5px 10px black;
-  .error-input{
+  .error-input {
     border: red;
-    color:red;
+    color: red;
   }
-  .error-input::placeholder{
- 
-    color:red;
+  .error-input::placeholder {
+    color: red;
   }
-  .wright-input{
+  .wright-input {
     border: black;
-    color:black;
+    color: black;
   }
-  h1{
+  h1 {
     text-align: center;
-    font-size: 40px;
-    
+    font-size: 4vw;
   }
-  label{
-    font-size: 30px;
+  label {
+    font-size: 5vw;
     font-weight: bold;
   }
-  input{
+  input {
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 25px;
     width: 20vw;
     height: 8vh;
-    font-size: 25px;
+    font-size: 2.5px;
     padding: 3px 15px;
   }
-  &-in{
+  &-in {
     display: flex;
     gap: 10px;
     align-items: center;
-    
   }
-  img{
+  img {
     width: 80px;
     height: 80px;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
+    @include mobileClick;
   }
-  img:hover{
+  img:hover {
     scale: 1.1;
   }
 }
 
+@include breakPoint(desktop) {
+  .search-weather {
+    &-in {
+      label {
+        text-align: center;
+        max-width: 250px;
+      }
+      input {
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+@include breakPoint(phone) {
+  .search-weather {
+    &-in {
+      flex-direction: column;
+    }
+    input {
+      @include mobileClick;
+    }
+    img {
+      @include mobileClick;
+    }
+  }
+}

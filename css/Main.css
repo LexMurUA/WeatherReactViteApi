@@ -2,10 +2,16 @@
   grid-area: container-main;
   display: flex;
   flex-direction: column;
-  background-color: azure;
+  background-color: rgb(255, 240, 240);
   background-image: url("../../images/sky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px;
+}
+
+@media (max-width: 576px) {
+  .container-main {
+    padding: 25px;
+  }
 }/*# sourceMappingURL=Main.css.map */

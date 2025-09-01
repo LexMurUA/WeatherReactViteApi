@@ -1,3 +1,5 @@
+@use "../../common" as *;
+
 .container-footer {
   grid-area: container-footer;
   color: black;
@@ -20,12 +22,18 @@
     &-obj {
       cursor: pointer;
       font-weight: bold;
-          padding: 15px;
-    border-radius: 25px;
+      padding: 15px;
+      border-radius: 25px;
     }
     &-obj:hover {
       color: aquamarine;
       background-color: #888888;
     }
+  }
+}
+
+@include breakPoint(laptop) {
+  .container-footer {
+    display: none;
   }
 }

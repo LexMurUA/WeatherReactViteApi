@@ -1,61 +1,98 @@
-.inform-place{
+@use "../../common" as *;
+
+.inform-place {
   display: flex;
   margin-top: 50px;
-  
+
   justify-content: center;
-  background-color: rgba(0, 204, 255,.4);
+  background-color: rgba(0, 204, 255, 0.4);
   border-radius: 25px;
-  p{
+  p {
     margin: 0;
     background-color: rgba(251, 255, 0, 0.8);
     border-radius: 25px;
+    min-width: 189px;
   }
-  h2{
+  h2 {
+    min-width: 189px;
     background-color: rgba(182, 182, 170, 0.8);
     color: black;
     border-radius: 25px;
   }
 
-  &-actual{
+  &-actual {
     width: 45%;
     padding: 20px 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-      h2{
-    
-    text-align: end;
-    padding: 10px 20px;
+    h2 {
+      text-align: end;
+      padding: 10px 20px;
+    }
+    p {
+      margin-top: 15px;
+      font-size: 30px;
+      padding: 15px;
+      text-align: end;
+    }
+    p:nth-child(3) {
+      display: flex;
+      align-items: center;
+    }
   }
-    p{
-    margin-top: 15px;
-    font-size: 30px;
-    padding: 15px;
-    text-align: end;
-  }
-  p:nth-child(3){
+  &-temperature {
+    width: 45%;
+    padding: 20px 80px;
     display: flex;
-    align-items: center;
-  }
-  }
-  &-temperature{
-     width: 45%;
-      padding: 20px 80px;
-          display: flex;
     flex-direction: column;
     align-items: flex-start;
-      h2{
-    width: 30vw;
-    text-align: start;
-    padding: 10px 20px;
-  }
-    p{
+    h2 {
+      width: 30vw;
+      text-align: start;
+      padding: 10px 20px;
+    }
+    p {
       margin-top: 15px;
-    font-size: 30px;
-    padding: 15px;
-    text-align: start;
+      font-size: 30px;
+      padding: 15px;
+      text-align: start;
+    }
   }
+}
 
+@include breakPoint(desktop) {
+  .inform-place {
+    p,
+    h2 {
+      max-width: 100%;
+
+      text-align: center;
+      font-size: 2vw;
+    }
   }
-  
+}
+@include breakPoint(laptop) {
+  .inform-place {
+    &-actual {
+      align-items: center;
+    }
+    &-temperature {
+      align-items: center;
+    }
+    p,
+    h2 {
+      padding: 10px;
+      max-width: 100%;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 2vw;
+    }
+  }
+}
+@include breakPoint(phone) {
+  .inform-place {
+    flex-direction: column;
+    align-items: center;
+  }
 }

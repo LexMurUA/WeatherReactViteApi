@@ -1,3 +1,5 @@
+@use "../../common" as *;
+
 .container-aside {
   grid-area: container-aside;
   border-radius: 25px;
@@ -24,5 +26,11 @@
   li:hover {
     scale: 1.1;
     color: aquamarine;
+  }
+}
+
+@include breakPoint(laptop) {
+  .container-aside {
+    display: none;
   }
 }

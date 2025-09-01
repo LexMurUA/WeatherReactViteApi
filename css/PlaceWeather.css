@@ -9,8 +9,10 @@
   margin: 0;
   background-color: rgba(251, 255, 0, 0.8);
   border-radius: 25px;
+  min-width: 189px;
 }
 .inform-place h2 {
+  min-width: 189px;
   background-color: rgba(182, 182, 170, 0.8);
   color: black;
   border-radius: 25px;
@@ -53,4 +55,35 @@
   font-size: 30px;
   padding: 15px;
   text-align: start;
+}
+
+@media (max-width: 1440px) {
+  .inform-place p,
+  .inform-place h2 {
+    max-width: 100%;
+    text-align: center;
+    font-size: 2vw;
+  }
+}
+@media (max-width: 1024px) {
+  .inform-place-actual {
+    align-items: center;
+  }
+  .inform-place-temperature {
+    align-items: center;
+  }
+  .inform-place p,
+  .inform-place h2 {
+    padding: 10px;
+    max-width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2vw;
+  }
+}
+@media (max-width: 576px) {
+  .inform-place {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=PlaceWeather.css.map */

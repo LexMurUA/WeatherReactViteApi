@@ -27,4 +27,10 @@
 .container-footer-link-obj:hover {
   color: aquamarine;
   background-color: #888888;
+}
+
+@media (max-width: 1024px) {
+  .container-footer {
+    display: none;
+  }
 }/*# sourceMappingURL=Footer.css.map */
