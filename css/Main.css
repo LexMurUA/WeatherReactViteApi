@@ -1,0 +1,11 @@
+.container-main {
+  grid-area: container-main;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  background-image: url("../../images/sky.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+}/*# sourceMappingURL=Main.css.map */
