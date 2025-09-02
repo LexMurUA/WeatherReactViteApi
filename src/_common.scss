@@ -1,42 +1,48 @@
+p,label {
+  font-size: 3vw;
+}
+h1 {
+  font-size: 4vw;
+}
+h2 {
+  font-size: 2vw;
+}
+input {
+  font-size: 1.8vw;
+}
+
+
 @mixin breakPoint($point) {
-    @if $point ==phone {
-        @media(max-width: 576px) {
-            @content;
-        }
+  @if $point ==phone {
+    @media (max-width: 576px) {
+      @content;
     }
-
-    @else if $point ==tablet {
-        @media(max-width: 834px) {
-            @content;
-        }
+  } @else if $point ==tablet {
+    @media (max-width: 834px) {
+      @content;
     }
-
-    @else if $point ==laptop {
-        @media(max-width: 1024px) {
-            @content;
-        }
+  } @else if $point ==laptop {
+    @media (max-width: 1024px) {
+      @content;
     }
-
-    @else if $point ==desktop {
-        @media(max-width: 1440px) {
-            @content;
-        }
+  } @else if $point ==desktop {
+    @media (max-width: 1440px) {
+      @content;
     }
+  }
 }
 
 @mixin mobileClick() {
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            transform: scale(1.1);
-        }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    @media (hover: none) and (pointer: coarse) {
-        &:active {
-            transform: scale(1.1);
-            opacity: 0.5;
-        }
+  @media (hover: none) and (pointer: coarse) {
+    &:active {
+      transform: scale(1.008);
+      opacity: 0.5;
     }
+  }
 }
-
-

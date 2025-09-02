@@ -27,6 +27,7 @@ export const WeatherInfo = () => {
           <label htmlFor="cityName">Введіть ваше місто:</label>
           {cityError ? (
             <input
+              maxLength="85"
               className="error-input"
               onKeyDown={searchCityEnter}
               ref={cityNameRef}
@@ -36,6 +37,7 @@ export const WeatherInfo = () => {
             />
           ) : (
             <input
+              maxLength="85"
               onKeyDown={searchCityEnter}
               ref={cityNameRef}
               id="cityName"
